@@ -25,9 +25,11 @@ header {
   color: #61dafb;
   text-decoration: none;
   font-size: 18px;
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -39,6 +41,7 @@ header {
   padding: 40px;
   background-color: #222;
   color: white;
+  border-bottom: 4px solid #61dafb;
 }
 
 .hero-content {
@@ -47,6 +50,7 @@ header {
 
 .hero-content h1 {
   font-size: 36px;
+  line-height: 1.3;
 }
 
 .hero-content p {
@@ -57,11 +61,17 @@ header {
 .cta-button {
   background-color: #61dafb;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border: none;
   font-size: 18px;
   cursor: pointer;
   text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #45a3d6;
 }
 
 .hero-image {
@@ -72,11 +82,12 @@ header {
 
 /* Section Styles */
 section {
-  margin: 40px;
+  margin: 40px auto;
   padding: 20px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
 }
 
 section h2 {
@@ -85,18 +96,35 @@ section h2 {
   margin-bottom: 20px;
 }
 
-/* Resume and Projects Sections */
-ul {
+section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+section ul {
   list-style-type: none;
   padding: 0;
 }
 
-ul li {
+section ul li {
   margin: 10px 0;
+  font-size: 16px;
 }
 
-ul li strong {
+section ul li strong {
   font-weight: bold;
+  color: #333;
+}
+
+/* Resume and Projects Sections */
+ul li a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  text-decoration: underline;
 }
 
 /* Footer */
@@ -105,6 +133,10 @@ footer {
   background-color: #222;
   color: white;
   padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 20px;
 }
 
 /* Media Queries for Responsive Design */
@@ -114,16 +146,60 @@ footer {
     align-items: center;
   }
 
+  .hero-content {
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
   .hero-image {
     max-width: 80%;
     margin-top: 20px;
   }
 
+  .cta-button {
+    padding: 12px 20px;
+  }
+
   .navbar {
     flex-direction: column;
+    text-align: center;
   }
 
   .navbar a {
     margin: 10px 0;
+    font-size: 16px;
+  }
+
+  section {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  section h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .cta-button {
+    font-size: 16px;
+    padding: 10px 18px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+
+  section h2 {
+    font-size: 20px;
   }
 }
