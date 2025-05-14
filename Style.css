@@ -1,234 +1,129 @@
-/* Importing Cute Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Pacifico&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sushma Hallikere Hundi Shambhu</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fefefe;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-:root {
-  --pink-light: #ffe5ec;
-  --pink-medium: #ffb6c1;
-  --pink-dark: #ff6f91;
-  --text-primary: #444;
-  --accent: #ff69b4;
-  --white: #fff;
-  --shadow: rgba(0, 0, 0, 0.1);
-  --radius: 16px;
-  --spacing: 1.5rem;
-}
+    header {
+      background-color: #d0f0c0; /* light pastel green */
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
-/* Reset and Typography */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    .navbar {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
 
-body {
-  font-family: 'Quicksand', sans-serif;
-  background: var(--pink-light);
-  color: var(--text-primary);
-  line-height: 1.7;
-  padding-bottom: 3rem;
-}
+    .nav-link {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
 
-/* Navigation Bar */
-.navbar {
-  background: var(--pink-medium);
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  border-radius: 0 0 var(--radius) var(--radius);
-  box-shadow: 0 4px 12px var(--shadow);
-}
+    .nav-link:hover {
+      color: #007f5f;
+    }
 
-.nav-link {
-  color: var(--white);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
+    #hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 4rem 2rem;
+      background-color: #ffffe0; /* pastel yellow */
+    }
 
-.nav-link:hover {
-  color: var(--accent);
-}
+    .hero-content {
+      max-width: 600px;
+    }
 
-/* Headings */
-h1, h2, h3 {
-  font-family: 'Pacifico', cursive;
-  color: var(--pink-dark);
-  text-align: center;
-  margin: 1rem auto;
-}
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #1a3c40;
+    }
 
-h2 {
-  font-size: 2.2rem;
-  margin-top: 2rem;
-}
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
 
-h3 {
-  font-size: 1.7rem;
-  margin-top: 1.2rem;
-}
+    .cta-button {
+      background-color: #007f5f;
+      color: #fff;
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
 
-/* Paragraphs and Lists */
-p, li {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 1rem;
-  padding: 0 1rem;
-}
+    .cta-button:hover {
+      background-color: #005f43;
+    }
 
-ul {
-  list-style-type: disc;
-  margin-left: 2rem;
-}
+    .hero-image {
+      width: 300px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
 
-/* Contact Section */
-#contact {
-  background: var(--white);
-  max-width: 700px;
-  margin: 3rem auto;
-  padding: 2rem;
-  border-radius: var(--radius);
-  box-shadow: 0 8px 20px var(--shadow);
-}
+    footer {
+      margin-top: auto;
+      background-color: #d0f0c0;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #333;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="resume.html" class="nav-link">Resume</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+  </header>
 
-#contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  margin-top: 1rem;
-}
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>From Data to Decisions</h1>
+      <h3>Insights by Sushma</h3>
+      <p>Harnessing the power of data to drive innovation and optimize decisions using AI and Machine Learning.</p>
+      <a href="about.html" class="cta-button">Learn More</a>
+    </div>
+    <img src="Sushma.jpeg" alt="Sushma Hallikere Hundi Shambhu" class="hero-image" />
+  </section>
 
-#contact label {
-  font-weight: 600;
-  color: #444;
-  margin-bottom: 0.4rem;
-}
-
-#contact input,
-#contact textarea {
-  padding: 0.9rem;
-  border: 2px solid var(--pink-medium);
-  border-radius: var(--radius);
-  font-size: 1rem;
-  background: #fff8fb;
-  resize: vertical;
-  transition: all 0.3s ease-in-out;
-}
-
-#contact input:focus,
-#contact textarea:focus {
-  border-color: var(--pink-dark);
-  outline: none;
-}
-
-#contact button {
-  background-color: var(--pink-dark);
-  color: var(--white);
-  font-weight: bold;
-  border: none;
-  border-radius: var(--radius);
-  padding: 0.9rem;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-#contact button:hover {
-  background-color: #ff3366;
-}
-
-/* Links */
-a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 4rem;
-  font-size: 0.9rem;
-  color: #888;
-}
-
-/* Hero Section */
-#hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 3rem 1rem;
-  background: #fff0f5;
-  border-radius: var(--radius);
-  margin: 2rem;
-  box-shadow: 0 6px 15px var(--shadow);
-}
-
-.hero-content h1 {
-  font-size: 2.5rem;
-  color: var(--pink-dark);
-  text-align: center;
-}
-
-.hero-content h3 {
-  font-style: italic;
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-}
-
-.hero-content p {
-  max-width: 600px;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.cta-button {
-  background: var(--pink-dark);
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: var(--radius);
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-  background: #e04372;
-}
-
-.hero-image {
-  width: 200px;
-  margin-top: 2rem;
-  border-radius: 50%;
-  box-shadow: 0 8px 20px var(--shadow);
-}
-
-/* Projects Images */
-img {
-  margin-top: 1rem;
-  border-radius: var(--radius);
-  box-shadow: 0 6px 12px var(--shadow);
-}
-
-/* Responsive Fixes */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #hero {
-    margin: 1rem;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-image {
-    width: 150px;
-  }
-}
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sushma Hallikere Hundi Shambhu</p>
+  </footer>
+</body>
+</html>
