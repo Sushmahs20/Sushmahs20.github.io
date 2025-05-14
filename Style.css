@@ -1,129 +1,211 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sushma Hallikere Hundi Shambhu</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fefefe;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+/* Root theme variables */
+:root {
+  --background-color: #eafaf1;
+  --primary-color: #fdf6e3;
+  --accent-color: #c3f3d1;
+  --text-color: #333;
+  --heading-color: #1d1d1d;
+  --button-color: #76c7ad;
+  --button-hover-color: #64bfa2;
+  --border-radius: 10px;
+  --font-family: 'Segoe UI', sans-serif;
+}
 
-    header {
-      background-color: #d0f0c0; /* light pastel green */
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+/* Reset some default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .navbar {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-    }
+body {
+  background-color: var(--background-color);
+  font-family: var(--font-family);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding-top: 80px; /* for fixed header */
+  padding-bottom: 80px; /* for footer spacing */
+}
 
-    .nav-link {
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
+/* Header */
+header {
+  background-color: var(--primary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
 
-    .nav-link:hover {
-      color: #007f5f;
-    }
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
-    #hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      padding: 4rem 2rem;
-      background-color: #ffffe0; /* pastel yellow */
-    }
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
 
-    .hero-content {
-      max-width: 600px;
-    }
+.nav-link:hover {
+  color: var(--button-color);
+}
 
-    .hero-content h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #1a3c40;
-    }
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
 
-    .hero-content p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-    }
+/* Hero Section */
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 10%;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  margin: 20px;
+}
 
-    .cta-button {
-      background-color: #007f5f;
-      color: #fff;
-      padding: 0.8rem 1.2rem;
-      border: none;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
+.hero-content {
+  max-width: 500px;
+}
 
-    .cta-button:hover {
-      background-color: #005f43;
-    }
+.hero-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--heading-color);
+  margin-bottom: 15px;
+}
 
-    .hero-image {
-      width: 300px;
-      height: auto;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
+.hero-content h3 {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 15px;
+}
 
-    footer {
-      margin-top: auto;
-      background-color: #d0f0c0;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #333;
-      border-top: 1px solid #ccc;
-    }
-  </style>
-</head>
-<body>
-  <!-- Navigation Bar -->
-  <header>
-    <div class="navbar">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="resume.html" class="nav-link">Resume</a>
-      <a href="projects.html" class="nav-link">Projects</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-    </div>
-  </header>
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-content">
-      <h1>From Data to Decisions</h1>
-      <h3>Insights by Sushma</h3>
-      <p>Harnessing the power of data to drive innovation and optimize decisions using AI and Machine Learning.</p>
-      <a href="about.html" class="cta-button">Learn More</a>
-    </div>
-    <img src="Sushma.jpeg" alt="Sushma Hallikere Hundi Shambhu" class="hero-image" />
-  </section>
+.cta-button {
+  display: inline-block;
+  background-color: var(--button-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Sushma Hallikere Hundi Shambhu</p>
-  </footer>
-</body>
-</html>
+.cta-button:hover {
+  background-color: var(--button-hover-color);
+}
+
+.hero-image {
+  width: 300px;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Headings */
+section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--heading-color);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 15px;
+  background-color: var(--accent-color);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+form button {
+  background-color: var(--button-color);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* Projects and Resume Sections */
+ul {
+  list-style-type: disc;
+  padding-left: 40px;
+  margin-bottom: 30px;
+}
+
+li strong {
+  color: var(--heading-color);
+  display: block;
+  margin-bottom: 5px;
+}
+
+a {
+  color: var(--button-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Images in Project Section */
+#projects img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  margin-top: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
