@@ -1,59 +1,65 @@
 /* Root theme variables */
 :root {
-  --background-color: #eafaf1;
-  --primary-color: #fdf6e3;
-  --accent-color: #c3f3d1;
-  --text-color: #333;
-  --heading-color: #1d1d1d;
-  --button-color: #76c7ad;
-  --button-hover-color: #64bfa2;
-  --border-radius: 10px;
-  --font-family: 'Segoe UI', sans-serif;
+  --background-color: #f0f5f1; /* Light greenish background */
+  --primary-color: #ffffff;    /* White */
+  --secondary-color: #f4f8f1;  /* Very light pastel green */
+  --accent-color: #a8d8a8;     /* Pastel green */
+  --highlight-color: #6c9a8b;  /* Slightly darker green */
+  --text-color: #333333;       /* Dark gray text */
+  --heading-color: #2d3b2f;    /* Darker green for headings */
+  --button-color: #80bfa3;     /* Soft greenish blue */
+  --button-hover-color: #70a891;
+  --border-radius: 8px;        /* Rounded corners */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Reset some default spacing */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body and Global Styles */
 body {
   background-color: var(--background-color);
   font-family: var(--font-family);
   color: var(--text-color);
   line-height: 1.6;
-  padding-top: 80px; /* for fixed header */
-  padding-bottom: 80px; /* for footer spacing */
+  padding-top: 80px; /* Space for fixed header */
+  padding-bottom: 80px; /* Space for fixed footer */
+  font-size: 16px;
 }
 
 /* Header */
 header {
-  background-color: var(--primary-color);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 15px 30px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-color);
+  padding: 20px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
 .navbar {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .nav-link {
   color: var(--text-color);
   text-decoration: none;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: var(--button-color);
+  color: var(--highlight-color);
 }
 
 /* Footer */
@@ -64,40 +70,42 @@ footer {
   width: 100%;
   background-color: var(--primary-color);
   text-align: center;
-  padding: 10px;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Hero Section */
 #hero {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
-  padding: 60px 10%;
-  background-color: var(--primary-color);
-  border-radius: var(--border-radius);
-  margin: 20px;
+  padding: 100px 15%;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 30px;
 }
 
 .hero-content {
-  max-width: 500px;
+  max-width: 50%;
 }
 
 .hero-content h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: var(--heading-color);
   margin-bottom: 15px;
 }
 
 .hero-content h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-style: italic;
+  color: var(--highlight-color);
   margin-bottom: 15px;
 }
 
 .hero-content p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 20px;
 }
 
@@ -105,7 +113,7 @@ footer {
   display: inline-block;
   background-color: var(--button-color);
   color: white;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border-radius: var(--border-radius);
   text-decoration: none;
   font-weight: bold;
@@ -120,15 +128,15 @@ footer {
   width: 300px;
   height: auto;
   border-radius: var(--border-radius);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Section Headings */
 section h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
   color: var(--heading-color);
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -136,40 +144,42 @@ section h2 {
 form {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
-  margin: 0 auto;
-  gap: 15px;
-  background-color: var(--accent-color);
-  padding: 30px;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: var(--primary-color);
   border-radius: var(--border-radius);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  gap: 20px;
 }
 
 form label {
   font-weight: bold;
+  font-size: 1rem;
 }
 
 form input,
 form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: 12px;
+  border: 2px solid #ddd;
   border-radius: var(--border-radius);
-  font-family: inherit;
   font-size: 1rem;
+  color: var(--text-color);
+  background-color: #f9f9f9;
 }
 
 form textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 150px;
 }
 
 form button {
   background-color: var(--button-color);
   color: white;
-  padding: 10px;
+  padding: 12px;
   border: none;
   border-radius: var(--border-radius);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -179,7 +189,7 @@ form button:hover {
   background-color: var(--button-hover-color);
 }
 
-/* Projects and Resume Sections */
+/* Projects and Resume Section */
 ul {
   list-style-type: disc;
   padding-left: 40px;
@@ -187,9 +197,9 @@ ul {
 }
 
 li strong {
+  font-size: 1.1rem;
+  font-weight: bold;
   color: var(--heading-color);
-  display: block;
-  margin-bottom: 5px;
 }
 
 a {
@@ -201,11 +211,38 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Images in Project Section */
+/* Project Images */
 #projects img {
   max-width: 100%;
-  height: auto;
   border-radius: var(--border-radius);
-  margin-top: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Spacing for sections */
+section {
+  margin: 40px 10%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .hero-image {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
