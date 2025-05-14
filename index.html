@@ -1,4 +1,3 @@
-cat > index.html << EOF
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,55 +7,71 @@ cat > index.html << EOF
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Navigation Bar -->
   <header>
-    <h1>Sushma Hallikere Hundi Shambhu</h1>
-    <p>From Data to Decisions | Insights by Sushma</p>
-    <nav>
+    <div class="navbar">
       <a href="#about">About</a>
       <a href="#resume">Resume</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-    </nav>
+    </div>
   </header>
 
+  <!-- Hero Section with Image -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Sushma Hallikere Hundi Shambhu</h1>
+      <p>Data Scientist | Innovator | Passionate about Data, AI, and Cloud Computing</p>
+      <a href="#about" class="cta-button">Learn More</a>
+    </div>
+    <img src="Sushma.jpeg" alt="Sushma" class="hero-image" />
+  </section>
+
+  <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
     <p>
-      MSc in Applied Data Science at the University of Essex. I’m passionate about using data, AI, and cloud computing to drive innovation.
+      MSc in Applied Data Science at the University of Essex. I’m passionate about using data, AI, and cloud computing to drive innovation. I have experience building data pipelines, creating machine learning models, and enhancing business strategies.
     </p>
     <p>
-      <a href="https://www.linkedin.com/in/sushma-h-h-shambhu-75a535194/">LinkedIn</a> |
-      <a href="https://github.com/Sushmahs20">GitHub</a>
+      <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sushma-h-h-shambhu-75a535194/">LinkedIn</a> | 
+      <strong>GitHub:</strong> <a href="https://github.com/Sushmahs20">GitHub</a>
     </p>
   </section>
 
+  <!-- Resume Section -->
   <section id="resume">
     <h2>Resume</h2>
-    <p>Download resume: <a href="resume.pdf" target="_blank">here</a></p>
+    <p>Download my resume: <a href="resume.pdf" target="_blank">here</a></p>
     <ul>
-      <li><strong>Education:</strong> MSc Applied Data Science, University of Essex</li>
-      <li><strong>Skills:</strong> Python, SQL, AWS, Tableau, Airflow</li>
-      <li><strong>Experience:</strong> DataWeave, Pole Star Global, HiveMinds</li>
+      <li><strong>Education:</strong> MSc Applied Data Science, University of Essex (2023 - 2024)</li>
+      <li><strong>Skills:</strong> Python, SQL, AWS, Tableau, Airflow, Data Visualization, Machine Learning</li>
+      <li><strong>Experience:</strong> Data Engineer Intern at DataWeave, Marketing Data Analyst Intern at HiveMinds</li>
     </ul>
   </section>
 
+  <!-- Projects & Publications -->
   <section id="projects">
     <h2>Projects & Publications</h2>
     <ul>
-      <li>🧠 EfficientNet-B7 for Anomaly Detection in Mammograms – Springer, 2024</li>
-      <li>📊 Ensemble Learning in Mammography – IEEE, 2023</li>
+      <li><strong>EfficientNet-B7 for Anomaly Detection in Mammograms</strong> – Springer, 2024</li>
+      <li><strong>Comparative Analysis of Ensemble Learning in Mammography</strong> – IEEE, 2023</li>
+      <li><strong>Machine Learning-Based Predictive Analytics for Marketing Campaign Optimization</strong> – HiveMinds</li>
     </ul>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: sushmahs2010@gmail.com</p>
-    <p>📍 England, United Kingdom</p>
+    <p>Location: England, United Kingdom</p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Sushma H H Shambhu</p>
   </footer>
+
 </body>
 </html>
-EOF
