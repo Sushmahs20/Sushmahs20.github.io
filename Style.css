@@ -1,16 +1,17 @@
 /* Root theme variables */
 :root {
-  --background-color: #f0f5f1; /* Light greenish background */
+  --background-color: #f7f7f7; /* Off-white background for a cleaner look */
   --primary-color: #ffffff;    /* White */
-  --secondary-color: #f4f8f1;  /* Very light pastel green */
-  --accent-color: #a8d8a8;     /* Pastel green */
-  --highlight-color: #6c9a8b;  /* Slightly darker green */
+  --secondary-color: #f3f3f3;  /* Light gray for soft backgrounds */
+  --accent-color: #a5d8d8;     /* Soft mint green */
+  --highlight-color: #4d9e9e;  /* Rich teal for accent */
   --text-color: #333333;       /* Dark gray text */
-  --heading-color: #2d3b2f;    /* Darker green for headings */
-  --button-color: #80bfa3;     /* Soft greenish blue */
-  --button-hover-color: #70a891;
-  --border-radius: 8px;        /* Rounded corners */
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --heading-color: #2c3e50;    /* Charcoal dark blue for headings */
+  --button-color: #6e9b8e;     /* Muted greenish teal */
+  --button-hover-color: #538a76; /* Slightly darker greenish hue */
+  --border-radius: 10px;        /* Rounded corners */
+  --font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, sans-serif; /* Modern sans-serif */
+  --font-heading: 'Poppins', sans-serif; /* Bold heading font */
 }
 
 /* General Reset */
@@ -29,6 +30,7 @@ body {
   padding-top: 80px; /* Space for fixed header */
   padding-bottom: 80px; /* Space for fixed footer */
   font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth background transition */
 }
 
 /* Header */
@@ -41,6 +43,7 @@ header {
   padding: 20px 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
 .navbar {
@@ -50,11 +53,12 @@ header {
 }
 
 .nav-link {
-  color: var(--text-color);
+  color: var(--heading-color);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
@@ -70,8 +74,19 @@ footer {
   width: 100%;
   background-color: var(--primary-color);
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--highlight-color);
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 /* Hero Section */
@@ -79,11 +94,16 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px 15%;
+  padding: 120px 10%;
   background-color: var(--secondary-color);
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   margin: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#hero:hover {
+  transform: scale(1.02); /* Subtle hover effect for hero section */
 }
 
 .hero-content {
@@ -91,10 +111,11 @@ footer {
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: var(--heading-color);
   margin-bottom: 15px;
+  font-family: var(--font-heading);
 }
 
 .hero-content h3 {
@@ -113,15 +134,17 @@ footer {
   display: inline-block;
   background-color: var(--button-color);
   color: white;
-  padding: 12px 25px;
+  padding: 12px 30px;
   border-radius: var(--border-radius);
   text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
   background-color: var(--button-hover-color);
+  transform: translateY(-4px);
 }
 
 .hero-image {
@@ -133,11 +156,12 @@ footer {
 
 /* Section Headings */
 section h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: var(--heading-color);
   margin-bottom: 20px;
   text-align: center;
+  font-family: var(--font-heading);
 }
 
 /* Contact Form */
@@ -154,7 +178,7 @@ form {
 }
 
 form label {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1rem;
 }
 
@@ -217,6 +241,11 @@ a:hover {
   border-radius: var(--border-radius);
   margin-top: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+#projects img:hover {
+  transform: scale(1.05);
 }
 
 /* Spacing for sections */
@@ -244,5 +273,10 @@ section {
   .navbar {
     flex-direction: column;
     gap: 15px;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
   }
 }
